@@ -94,6 +94,9 @@ _.PAPER = {
   PAPER_PART_CUT: '\x1d\x56\x01', // Partial cut paper
   PAPER_CUT_A: '\x1d\x56\x41', // Partial cut paper
   PAPER_CUT_B: '\x1d\x56\x42', // Partial cut paper
+
+  VKP80_PRESENTATION: '\x1d\x65\x03\x0c',
+  VKP80_EJECTION: '\x1d\x65\x05',
 };
 
 /**
@@ -300,7 +303,7 @@ _.GSV0_FORMAT = {
  * @type {string}
  */
 _.BEEP = '\x1b\x42', // Printer Buzzer pre hex
-  
+
 /**
  * [COLOR description]
  * @type {Object}

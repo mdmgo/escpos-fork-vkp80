@@ -751,6 +751,24 @@ Printer.prototype.cut = function (part, feed) {
 };
 
 /**
+ * [function Ejection paper for CUSTOM VKP80 printers]
+ * @return {[Printer]} printer  [the escpos printer instance]
+ */
+Printer.prototype.ejection = function () {
+  this.buffer.write(_.PAPER['VKP80_EJECTION']);
+  return this;
+};
+
+/**
+ * [function PRESENTATION paper for CUSTOM VKP80 printers]
+ * @return {[Printer]} printer  [the escpos printer instance]
+ */
+Printer.prototype.presentation = function () {
+  this.buffer.write(_.PAPER['VKP80_PRESENTATION']);
+  return this;
+};
+
+/**
  * [close description]
  * @param  {Function} callback [description]
  * @param  {[type]}   options  [description]
