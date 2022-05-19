@@ -1,8 +1,9 @@
 {
-  "name": "escpos",
-  "version": "2.5.3",
+  "name": "escpos-fork-vkp80",
+  "version": "2.5.4",
   "description": "ESC/POS Printer driver for nodejs",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "mocha",
     "start": "node server.js"
@@ -41,6 +42,7 @@
     "node-bluetooth": "*"
   },
   "devDependencies": {
+    "@types/node": "^17.0.34",
     "mocha": "*"
   },
   "engines": {
