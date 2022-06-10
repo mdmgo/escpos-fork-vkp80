@@ -146,7 +146,7 @@ Printer.prototype.text = function (content, encoding) {
  */
 Printer.prototype.drawLine = function (character) {
   if (!character) character = '-';
-  
+
   for (var i = 0; i < this.width; i++) {
     this.buffer.write(Buffer.from(character));
   }
@@ -800,6 +800,24 @@ Printer.prototype.cut = function (part, feed) {
   this.buffer.write(_.PAPER[
     part ? 'PAPER_PART_CUT' : 'PAPER_FULL_CUT'
   ]);
+  return this;
+};
+
+/**
+ * [function Ejection paper for CUSTOM VKP80 printers]
+ * @return {[Printer]} printer  [the escpos printer instance]
+ */
+Printer.prototype.ejection = function () {
+  this.buffer.write(_.PAPER['VKP80_EJECTION']);
+  return this;
+};
+
+/**
+ * [function PRESENTATION paper for CUSTOM VKP80 printers]
+ * @return {[Printer]} printer  [the escpos printer instance]
+ */
+Printer.prototype.presentation = function () {
+  this.buffer.write(_.PAPER['VKP80_PRESENTATION']);
   return this;
 };
 
